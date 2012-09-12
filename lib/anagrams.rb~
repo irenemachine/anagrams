@@ -1,0 +1,12 @@
+require 'solver'
+require 'permutation'
+
+def find_all_anagrams(dictionary)
+	mappings = {}
+	dictionary.each{|word| mappings[word] = find_permutations_of(word) }
+	mappings
+end
+
+def find_permutations_of(word)
+	Permutation.find(word)
+end
