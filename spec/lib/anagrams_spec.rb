@@ -21,6 +21,13 @@ describe "solver" do
 		end
 	end
 
+	context "two word dictionary" do
+		it "does not report invalid words as an anagram" do
+			dictionary = ["open", "nope"]
+			find_all_anagrams(dictionary)["open"].should_not include("epon")
+		end
+	end
+
 	
 
 =begin
